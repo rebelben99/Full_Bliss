@@ -28,12 +28,31 @@ switch (state) {
 			vSpeedFraction = 0;
 			vSpeed = -jumpSpeed;
 		}
+		
+		if (mouse_check_button_pressed(mb_left)) { //when mouse clicked
+			//hook Pos
+			grappleX = mouse_x; 
+			grappleY = mouse_y;
+			//player Pos
+			ropeX = x;
+			ropeY = y;
+			
+			ropeAngleVelocity = 0; //momentum added here
+			
+			ropeAngle = point_direction(grappleX,grappleY,x,y); //angle of fire
+			
+			ropeLength = point_distance(grappleX,grappleY,x,y); //rope length
+			
+			state = pState.swing;			
+		}
+		
 	}break;
 	
-	case pState.swing: {
+	case pState.swing: { //7:25 https://www.youtube.com/watch?v=2prKyETuTaA
 		
 	}break;
 }
+
 
 hSpeed += hSpeedFraction;
 vSpeed += vSpeedFraction;
@@ -42,6 +61,9 @@ vSpeedFraction = frac (vSpeed);
 hSpeed -= hSpeedFraction;
 vSpeed -= vSpeedFraction;
 
+
+
+//Collision w/ terrain
 if(place_meeting(x+hSpeed,y,o_wall)) {
 	var _hStep = sign(hSpeed);	
 	hSpeed = 0;
