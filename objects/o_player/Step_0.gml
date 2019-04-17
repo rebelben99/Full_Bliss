@@ -15,47 +15,15 @@ switch (state) {
 			var hFriction = hFrictionGround;
 			if (!grounded) hFriction = hFrictionAir;
 			hSpeed = Approach(hSpeed,0,hFriction);
-			
-
-
-
-
-
-
-
-
-
-/*
-//Calculate Movement
-var move = key_right - key_left; // 1=right, 0=stand, -1=left
-
-hsp = move * walksp; //horisontal move speed.
-
-vsp = vsp + grv;
-
-//jump check
-if (place_meeting(x,y+1,o_wall)) && (key_jump) {
-	vsp = -10;
+		}
+		hSpeed = clamp(hSpeed,-walkSpeed,walkSpeed);
+		
+		vSpeed += gravity_;
+		
+		if (_keyJump) && (grounded) {
+			grounded = false;
+			vSpeedFraction = 0;
+			vSpeed = -jumpSpeed;
+		}
+	}break;
 }
-
-
-//Horisontal Collision
-if (place_meeting(x+hsp,y,o_wall)) //placemeeting = boolean collision check
-{
-	while (!place_meeting(x+sign(hsp),y,o_wall)) { //sign = returns 1 or -1 depending on positive or negative variable
-		x = x + sign(hsp);
-	}
-	hsp = 0;
-}
-x = x + hsp; //Change in horisontal position.
-
-//Verticle Collision
-if (place_meeting(x,y+vsp,o_wall)) //placemeeting = boolean collision check
-{
-	while (!place_meeting(x,y+sign(vsp),o_wall)) { //sign = returns 1 or -1 depending on positive or negative variable
-		y = y + sign(vsp);
-	}
-	vsp = 0;
-}
-y = y + vsp; //Change in horisontal position.
-*/
