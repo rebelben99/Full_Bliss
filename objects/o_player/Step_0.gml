@@ -6,6 +6,9 @@ var _keyUp = keyboard_check(ord("W"));
 var _keyDown = keyboard_check(ord("S"));
 var _keyJump = keyboard_check_pressed(vk_space);
 
+
+
+
 switch (state) {
 	case pState.normal: {
 		var dir = _keyRight - _keyLeft; // 1=right, 0=stand, -1=left
@@ -26,4 +29,33 @@ switch (state) {
 			vSpeed = -jumpSpeed;
 		}
 	}break;
+	
+	case pState.swing: {
+		
+	}break;
 }
+
+hSpeed += hSpeedFraction;
+vSpeed += vSpeedFraction;
+hSpeedFraction = frac (hSpeed);
+vSpeedFraction = frac (vSpeed);
+hSpeed -= hSpeedFraction;
+vSpeed -= vSpeedFraction;
+
+if(place_meeting(x+hSpeed,y,o_wall)) {
+	var _hStep = sign(hSpeed);	
+	hSpeed = 0;
+	hSpeedFraction = 0;
+	while(!place_meeting(x+_hStep,y,o_wall)) 
+		x += _hStep;
+}
+x += hSpeed
+
+if(place_meeting(x,y+vSpeed,o_wall)) {
+	var _vStep = sign(vSpeed);	
+	vSpeed = 0;
+	vSpeedFraction = 0;
+	while(!place_meeting(x,y+_vStep,o_wall)) 
+		y += _vStep;
+}
+y += vSpeed
