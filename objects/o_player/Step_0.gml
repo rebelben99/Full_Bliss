@@ -26,10 +26,10 @@ switch (state) {
 		if (_keyJump) && (grounded) {
 			grounded = false;
 			vSpeedFraction = 0;
-			vSpeed = -jumpSpeed;
+			vSpeed += -jumpSpeed;
 		}
 		
-		if (mouse_check_button_pressed(mb_left)) { //when mouse clicked
+		if (keyboard_check_pressed(vk_lalt) || mouse_check_button_pressed(mb_left)) { //when mouse clicked or left alt pressed
 			//hook Pos
 			grappleX = mouse_x; 
 			grappleY = mouse_y;
@@ -37,7 +37,7 @@ switch (state) {
 			ropeX = x;
 			ropeY = y;
 			
-			ropeAngleVelocity = 0; //momentum added here
+			ropeAngleVelocity = hSpeed/2; //momentum added here
 			
 			ropeAngle = point_direction(grappleX,grappleY,x,y); //angle of fire
 			
@@ -49,6 +49,22 @@ switch (state) {
 	}break;
 	
 	case pState.swing: { //7:25 https://www.youtube.com/watch?v=2prKyETuTaA
+		var _ropeAngleAcceleration = -0.2 * dcos(ropeAngle); //rope acceleration downwards, must be multiplied by a negative number
+		ropeAngleVelocity += _ropeAngleAcceleration;
+		ropeAngle += ropeAngleVelocity;
+		ropeAngleVelocity *= 0.99; //air friction
+		
+		ropeX = grappleX + lengthdir_x(ropeLength,ropeAngle);
+		ropeY = grappleY + lengthdir_y(ropeLength,ropeAngle)
+		
+		hSpeed = ropeX - x;
+		vSpeed = ropeY - y;
+		
+		if(_keyJump) {	
+			state = pState.normal;
+			vSpeedFraction = 0;
+			vSpeed = -jumpSpeed + vSpeed;
+		}
 		
 	}break;
 }
@@ -70,8 +86,14 @@ if(place_meeting(x+hSpeed,y,o_wall)) {
 	hSpeedFraction = 0;
 	while(!place_meeting(x+_hStep,y,o_wall)) 
 		x += _hStep;
+	if (state == pState.swing) {
+		ropeAngle = point_direction(grappleX,grappleY,x,y);
+		ropeAngleVelocity = 0;//bounce
+	}
 }
 x += hSpeed
+
+
 
 if(place_meeting(x,y+vSpeed,o_wall)) {
 	var _vStep = sign(vSpeed);	
@@ -79,5 +101,9 @@ if(place_meeting(x,y+vSpeed,o_wall)) {
 	vSpeedFraction = 0;
 	while(!place_meeting(x,y+_vStep,o_wall)) 
 		y += _vStep;
+	if (state == pState.swing) {
+		ropeAngle = point_direction(grappleX,grappleY,x,y);
+		ropeAngleVelocity = 0;//bounce
+	}
 }
 y += vSpeed
