@@ -80,11 +80,17 @@ vSpeed -= vSpeedFraction;
 
 
 //Collision w/ terrain
-if(place_meeting(x+hSpeed,y,o_wall)) {
+if(place_meeting(x+hSpeed,y,o_wall) || place_meeting(x+hSpeed,y,o_border)) {
 	var _hStep = sign(hSpeed);	
-	hSpeed = 0;
+	
+	if (hSpeed > 1) {
+		hSpeed *= -0.7;
+	} else {
+		hSpeed = 0;
+	}
+	
 	hSpeedFraction = 0;
-	while(!place_meeting(x+_hStep,y,o_wall)) 
+	while(!place_meeting(x+_hStep,y,o_wall) || place_meeting(x+hSpeed,y,o_border)) 
 		x += _hStep;
 	if (state == pState.swing) {
 		ropeAngle = point_direction(grappleX,grappleY,x,y);
@@ -95,11 +101,23 @@ x += hSpeed
 
 
 
-if(place_meeting(x,y+vSpeed,o_wall)) {
+if(place_meeting(x,y+vSpeed,o_wall) || place_meeting(x,y+vSpeed,o_border)) {
 	var _vStep = sign(vSpeed);	
-	vSpeed = 0;
+	
+	if(_keyJump) {	
+			state = pState.normal;
+			vSpeedFraction = 0;
+			vSpeed = -jumpSpeed + vSpeed;
+		}
+	
+	if (vSpeed > 1) {
+		vSpeed *= -0.7;
+	} else {
+		vSpeed = 0;
+	}
+	
 	vSpeedFraction = 0;
-	while(!place_meeting(x,y+_vStep,o_wall)) 
+	while(!place_meeting(x,y+_vStep,o_wall) || place_meeting(x,y+vSpeed,o_border)) 
 		y += _vStep;
 	if (state == pState.swing) {
 		ropeAngle = point_direction(grappleX,grappleY,x,y);

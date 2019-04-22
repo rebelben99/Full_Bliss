@@ -74,7 +74,7 @@
             "Key": "21f2982d-55d9-4000-b05e-80d41ec9ce45",
             "Value": {
                 "id": "c110a485-8c53-4c9b-9f38-36b089529565",
-                "resourcePath": "objects\\object4\\object4.yy",
+                "resourcePath": "objects\\o_wall5\\o_wall5.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -236,14 +236,6 @@
                 "id": "f7e07137-1181-4c9c-ae21-a76c95cf2b10",
                 "resourcePath": "views\\beb2255d-e38e-409a-9e5b-d8a2d2528558.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "c6ab7072-5281-417a-9f51-318d21c503ad",
-            "Value": {
-                "id": "6e9f78ae-0dd8-410f-8eef-433f097522a9",
-                "resourcePath": "sprites\\sprite2\\sprite2.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
