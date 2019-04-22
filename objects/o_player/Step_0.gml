@@ -52,7 +52,7 @@ switch (state) {
 		var _ropeAngleAcceleration = -0.2 * dcos(ropeAngle); //rope acceleration downwards, must be multiplied by a negative number
 		ropeAngleVelocity += _ropeAngleAcceleration;
 		ropeAngle += ropeAngleVelocity;
-		ropeAngleVelocity *= 0.99; //air friction
+		ropeAngleVelocity *= 0.999; //air friction
 		
 		ropeX = grappleX + lengthdir_x(ropeLength,ropeAngle);
 		ropeY = grappleY + lengthdir_y(ropeLength,ropeAngle)
