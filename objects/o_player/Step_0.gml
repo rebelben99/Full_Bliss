@@ -49,10 +49,16 @@ switch (state) {
 	}break;
 	
 	case pState.swing: { //7:25 https://www.youtube.com/watch?v=2prKyETuTaA
-		var _ropeAngleAcceleration = -0.2 * dcos(ropeAngle); //rope acceleration downwards, must be multiplied by a negative number
+		var _ropeAngleAcceleration = -rGravity * dcos(ropeAngle); //rope acceleration downwards, must be multiplied by a negative number
 		ropeAngleVelocity += _ropeAngleAcceleration;
+		if(ropeAngleVelocity > maxRopeSpeed) {
+			ropeAngleVelocity = maxRopeSpeed;
+		}
+		if(ropeAngleVelocity < -maxRopeSpeed) {
+			ropeAngleVelocity = -maxRopeSpeed;
+		}
 		ropeAngle += ropeAngleVelocity;
-		ropeAngleVelocity *= 0.999; //air friction
+		ropeAngleVelocity *= rFriction; //air friction when swinging
 		
 		ropeX = grappleX + lengthdir_x(ropeLength,ropeAngle);
 		ropeY = grappleY + lengthdir_y(ropeLength,ropeAngle)
@@ -94,7 +100,7 @@ if(place_meeting(x+hSpeed,y,o_wall) || place_meeting(x+hSpeed,y,o_border)) {
 		x += _hStep;
 	if (state == pState.swing) {
 		ropeAngle = point_direction(grappleX,grappleY,x,y);
-		ropeAngleVelocity = 0;//bounce
+		ropeAngleVelocity *= -0.99;//bounce
 	}
 }
 x += hSpeed
@@ -121,7 +127,7 @@ if(place_meeting(x,y+vSpeed,o_wall) || place_meeting(x,y+vSpeed,o_border)) {
 		y += _vStep;
 	if (state == pState.swing) {
 		ropeAngle = point_direction(grappleX,grappleY,x,y);
-		ropeAngleVelocity = 0;//bounce
+		ropeAngleVelocity *= -0.99;//bounce
 	}
 }
 y += vSpeed
