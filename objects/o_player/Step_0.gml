@@ -83,7 +83,7 @@ vSpeed -= vSpeedFraction;
 if(place_meeting(x+hSpeed,y,o_wall) || place_meeting(x+hSpeed,y,o_border)) {
 	var _hStep = sign(hSpeed);	
 	
-	if (hSpeed > 1) {
+	if (abs(hSpeed) > 1) {
 		hSpeed *= -0.7;
 	} else {
 		hSpeed = 0;
@@ -110,7 +110,7 @@ if(place_meeting(x,y+vSpeed,o_wall) || place_meeting(x,y+vSpeed,o_border)) {
 			vSpeed = -jumpSpeed + vSpeed;
 		}
 	
-	if (vSpeed > 1) {
+	if (abs(vSpeed) > 1) {
 		vSpeed *= -0.7;
 	} else {
 		vSpeed = 0;
