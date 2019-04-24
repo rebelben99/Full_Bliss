@@ -63,7 +63,7 @@ switch (state) {
 		ropeX = grappleX + lengthdir_x(ropeLength,ropeAngle);
 		ropeY = grappleY + lengthdir_y(ropeLength,ropeAngle)
 		
-		
+
 		vSpeed = ropeY - y;
 		hSpeed = ropeX - x;
 		
