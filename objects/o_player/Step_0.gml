@@ -62,7 +62,7 @@ switch (state) {
 		
 		
 		
-		ropeAngle += ropeAngleVelocity;
+		ropeAngle += ropeAngleVelocity/                      (ropeLength/150);
 		
 		
 		if(ropeAngleVelocity > maxRopeSpeed) {

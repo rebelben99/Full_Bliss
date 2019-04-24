@@ -1,5 +1,5 @@
 // h = Horrisontal, v = Verticle
-maxRopeSpeed = 3; //Max speed when grappled
+maxRopeSpeed = 4; //Max speed when grappled
 hSpeed = 0; 
 vSpeed = 0;
 walkSpeed = 5; 
@@ -20,3 +20,13 @@ enum pState {
 	normal,
 	swing
 }
+
+/*
+Fix angle velocity::
+
+Angle velocity/Length
+
+
+
+
+*/
