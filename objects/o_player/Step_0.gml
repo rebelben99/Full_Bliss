@@ -9,6 +9,39 @@ var _keyJump = keyboard_check_pressed(vk_space);
 
 
 
+
+
+
+
+
+var size_list = ds_list_size(list);
+if (size_list >= length){
+	var grid = list[| 0];
+	if ds_exists(grid,ds_type_grid) {
+		ds_grid_destroy(grid);
+	}
+	ds_list_delete(list,0);
+}
+
+//add a point each step//
+var grid = ds_grid_create(1,e_point.length)
+grid[# 0, e_point.x] = o_player.x;
+grid[# 0, e_point.y] = o_player.y;
+grid[# 0, e_point.width] = width;
+ds_list_add(list, grid);
+
+
+
+
+
+
+
+
+
+
+
+
+
 switch (state) {
 	case pState.normal: {
 		var dir = _keyRight - _keyLeft; // 1=right, 0=stand, -1=left
@@ -57,22 +90,22 @@ switch (state) {
 		var _ropeAngleAcceleration = -rGravity * dcos(ropeAngle); //rope acceleration downwards, must be multiplied by a negative number
 		ropeAngleVelocity += _ropeAngleAcceleration;
 		
-		
-		
-		
-		
-		
-		ropeAngle += ropeAngleVelocity/(ropeLength/150);
-		
-		
-		if(ropeAngleVelocity > maxRopeSpeed) {
+		if(ropeAngleVelocity > maxRopeSpeed) { ////////////////////Create Script using code to limit Value1 to a positive and negative Value2
 			ropeAngleVelocity = maxRopeSpeed;
 		}
 		if(ropeAngleVelocity < -maxRopeSpeed) {
 			ropeAngleVelocity = -maxRopeSpeed;
 		}
 		
+		ropeAngle += ropeAngleVelocity/(ropeLength/150);
+		
 		ropeAngleVelocity *= rFriction; //air friction when swinging
+		
+		
+		
+		if mouse_wheel_down() {
+			ropeLength -= 10;
+		}
 		
 		ropeX = grappleX + lengthdir_x(ropeLength,ropeAngle);
 		ropeY = grappleY + lengthdir_y(ropeLength,ropeAngle)
