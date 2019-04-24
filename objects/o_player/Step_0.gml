@@ -13,7 +13,6 @@ var _keyJump = keyboard_check_pressed(vk_space);
 
 
 
-
 var size_list = ds_list_size(list);
 if (size_list >= length){
 	var grid = list[| 0];
@@ -101,10 +100,12 @@ switch (state) {
 		
 		ropeAngleVelocity *= rFriction; //air friction when swinging
 		
-		
-		
-		if mouse_wheel_down() {
-			ropeLength -= 10;
+		//Rope Length Controlls
+		if _keyDown && ropeLength >= 10 { //reel rope in ("s" and ?)
+			ropeLength -= 2;
+		}
+		if _keyUp && ropeLength <= 500 { //push rope out ("w" and ?)
+			ropeLength += 2;
 		}
 		
 		ropeX = grappleX + lengthdir_x(ropeLength,ropeAngle);
