@@ -63,8 +63,18 @@ switch (state) {
 		ropeX = grappleX + lengthdir_x(ropeLength,ropeAngle);
 		ropeY = grappleY + lengthdir_y(ropeLength,ropeAngle)
 		
-		hSpeed = ropeX - x;
-		vSpeed = ropeY - y;
+		if(ropeX > (maxRopeSpeed*2)){ 
+			hSpeed = (maxRopeSpeed * 2) - x 
+		}else{
+			hSpeed = ropeX - x;
+		}
+		if(ropeY > (maxRopeSpeed*2)){
+			vSpeed = (maxRopeSpeed * 2) - x 
+		}else{
+			vSpeed = ropeY - y;
+		}
+		//vSpeed = ropeY - y;
+		//hSpeed = ropeX - x;
 		
 		if(_keyJump) {	
 			state = pState.normal;
