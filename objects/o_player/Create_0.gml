@@ -20,13 +20,3 @@ enum pState {
 	normal,
 	swing
 }
-
-/*
-Fix angle velocity::
-
-Angle velocity/Length
-
-
-
-
-*/

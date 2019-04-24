@@ -67,7 +67,7 @@ switch (state) {
 		
 		
 		
-		ropeAngle += ropeAngleVelocity/                      (ropeLength/150);
+		ropeAngle += ropeAngleVelocity/(ropeLength/150);
 		
 		
 		
