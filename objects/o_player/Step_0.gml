@@ -52,12 +52,7 @@ switch (state) {
 		//ropeAngleVelocity += _ropeAngleAcceleration;
 		
 		
-		if(ropeAngleVelocity > maxRopeSpeed) {
-			ropeAngleVelocity = maxRopeSpeed;
-		}
-		if(ropeAngleVelocity < -maxRopeSpeed) {
-			ropeAngleVelocity = -maxRopeSpeed;
-		}
+		
 		
 		
 		
@@ -79,6 +74,12 @@ switch (state) {
 		ropeAngle += ropeAngleVelocity;
 		}
 		
+		if(ropeAngleVelocity > maxRopeSpeed) {
+			ropeAngleVelocity = maxRopeSpeed;
+		}
+		if(ropeAngleVelocity < -maxRopeSpeed) {
+			ropeAngleVelocity = -maxRopeSpeed;
+		}
 		
 		ropeAngleVelocity *= rFriction; //air friction when swinging
 		
