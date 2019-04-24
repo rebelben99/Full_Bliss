@@ -36,7 +36,6 @@ switch (state) {
 			//player Pos
 			ropeX = x;
 			ropeY = y;
-			
 			ropeAngleVelocity = hSpeed/2; //momentum added here
 			
 			ropeAngle = point_direction(grappleX,grappleY,x,y); //angle of fire
@@ -50,14 +49,37 @@ switch (state) {
 	
 	case pState.swing: { //7:25 https://www.youtube.com/watch?v=2prKyETuTaA
 		var _ropeAngleAcceleration = -rGravity * dcos(ropeAngle); //rope acceleration downwards, must be multiplied by a negative number
-		ropeAngleVelocity += _ropeAngleAcceleration;
+		//ropeAngleVelocity += _ropeAngleAcceleration;
+		
+		
 		if(ropeAngleVelocity > maxRopeSpeed) {
 			ropeAngleVelocity = maxRopeSpeed;
 		}
 		if(ropeAngleVelocity < -maxRopeSpeed) {
 			ropeAngleVelocity = -maxRopeSpeed;
 		}
+		
+		
+		
+		if(grappleY > ropeY) {
+			
+			
+			ropeAngleVelocity += -_ropeAngleAcceleration;
+			
+		
+		
+		ropeAngle += -ropeAngleVelocity;
+		} else if(grappleY <= ropeY) {
+			
+			
+			ropeAngleVelocity += _ropeAngleAcceleration;
+			
+		
+		
 		ropeAngle += ropeAngleVelocity;
+		}
+		
+		
 		ropeAngleVelocity *= rFriction; //air friction when swinging
 		
 		ropeX = grappleX + lengthdir_x(ropeLength,ropeAngle);
