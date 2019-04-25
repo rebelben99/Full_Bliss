@@ -23,7 +23,7 @@ if (size_list >= length){
 }
 
 //add a point each step//
-var grid = ds_grid_create(1,e_point.length)
+var grid = ds_grid_create(1,e_point.length);
 grid[# 0, e_point.x] = o_player.x;
 grid[# 0, e_point.y] = o_player.y;
 grid[# 0, e_point.width] = width;
