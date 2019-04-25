@@ -23,7 +23,7 @@ enum pState {
 	swing
 }
 
-color = make_color_rgb(0,100,100);
+color = make_color_rgb(random_range(30,225),random_range(30,225),random_range(30,225));
 ribbonFallOff = 0.975; //the amount by which the next segment is smaller, 1 = no change, any less than .95 is not desirable.
 
 list = ds_list_create();
