@@ -29,9 +29,19 @@ grid[# 0, e_point.y] = o_player.y;
 grid[# 0, e_point.width] = width;
 ds_list_add(list, grid);
 
+//test for whether ribbon is constant width or pointed
+if(keyboard_check_pressed(vk_numpad1)) { //constant
+	ribbonFallOff = 1;
+}
+if(keyboard_check_pressed(vk_numpad2)) { //pointed
+	ribbonFallOff = 0.975;	
+}
 
-
-
+//refresh width of trail
+for (var i = 0; i < size_list; i++) {
+	var gridP1 = list[| i];
+	gridP1[# 0, e_point.width] *= ribbonFallOff;
+}
 
 
 

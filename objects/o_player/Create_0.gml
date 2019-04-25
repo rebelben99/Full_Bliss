@@ -24,6 +24,7 @@ enum pState {
 }
 
 color = make_color_rgb(0,100,100);
+ribbonFallOff = 0.975; //the amount by which the next segment is smaller, 1 = no change, any less than .95 is not desirable.
 
 list = ds_list_create();
 
