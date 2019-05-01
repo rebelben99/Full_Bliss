@@ -12,7 +12,6 @@ var _keyJump = keyboard_check_pressed(vk_space);
 
 
 
-
 var size_list = ds_list_size(list);
 if (size_list >= length){
 	var grid = list[| 0];
@@ -34,8 +33,10 @@ if(keyboard_check_pressed(vk_numpad1)) { //constant
 	ribbonFallOff = 1;
 }
 if(keyboard_check_pressed(vk_numpad2)) { //pointed
-	ribbonFallOff = 0.975;	
+	ribbonFallOff = 0.98;	
 }
+
+
 
 //refresh width of trail
 for (var i = 0; i < size_list; i++) {
@@ -97,6 +98,7 @@ switch (state) {
 	
 	case pState.swing: { 
 		var _ropeAngleAcceleration = -rGravity * dcos(ropeAngle); //rope acceleration downwards, must be multiplied by a negative number
+		_ropeAngleAcceleration += (_keyRight - _keyLeft)*0.08;
 		ropeAngleVelocity += _ropeAngleAcceleration;
 		
 		if(ropeAngleVelocity > maxRopeSpeed) { ////////////////////Create Script using code to limit Value1 to a positive and negative Value2
@@ -112,10 +114,10 @@ switch (state) {
 		
 		//Rope Length Controlls
 		if _keyDown && ropeLength >= 10 { //reel rope in ("s" and ?)
-			ropeLength -= 2;
+			ropeLength -= 3.5;
 		}
 		if _keyUp && ropeLength <= 500 { //push rope out ("w" and ?)
-			ropeLength += 2;
+			ropeLength += 3.5;
 		}
 		
 		ropeX = grappleX + lengthdir_x(ropeLength,ropeAngle);
