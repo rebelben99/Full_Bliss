@@ -2,7 +2,7 @@ if (state == pState.swing) {
 	draw_line_width(grappleX,grappleY,ropeX,ropeY,2);
 }
 
-draw_set_color(color);
+draw_set_color(PColor);
 
 draw_primitive_begin(pr_trianglestrip);
 	var size_list = ds_list_size(list);
