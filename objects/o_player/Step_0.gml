@@ -5,7 +5,7 @@ var _keyRight = keyboard_check(ord("D"));
 var _keyUp = keyboard_check(ord("W"));
 var _keyDown = keyboard_check(ord("S"));
 var _keyJump = keyboard_check_pressed(vk_space);
-
+var _keyDrop = keyboard_check_pressed(vk_control);
 
 
 
@@ -81,10 +81,10 @@ switch (state) {
 			ropeY = y;
 			
 			
-			if(grappleY >= ropeY) {
-				ropeAngleVelocity = -hSpeed;
+			if(grappleY >= ropeY) { //if (vSpeed < hSpeed)
+				ropeAngleVelocity = vSpeed;
 			} else {
-				ropeAngleVelocity = hSpeed;
+				ropeAngleVelocity = -vSpeed;
 			}
 			
 			ropeAngle = point_direction(grappleX,grappleY,x,y); //angle of fire
@@ -108,7 +108,10 @@ switch (state) {
 			ropeAngleVelocity = -maxRopeSpeed;
 		}
 		
-		ropeAngle += ropeAngleVelocity/(ropeLength/150);
+		var lengthFraction = 150;
+		//if()
+		
+		ropeAngle += ropeAngleVelocity/(ropeLength/lengthFraction);
 		
 		ropeAngleVelocity *= rFriction; //air friction when swinging
 		
@@ -131,6 +134,10 @@ switch (state) {
 			state = pState.normal;
 			vSpeedFraction = 0;
 			vSpeed = -jumpSpeed + vSpeed;
+		}
+		if(_keyDrop) {	
+			state = pState.normal;
+			vSpeedFraction = 0;
 		}
 		
 	}break;
