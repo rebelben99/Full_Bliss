@@ -82,9 +82,9 @@ switch (state) {
 			
 			
 			if(grappleY >= ropeY) { //if (vSpeed < hSpeed)
-				ropeAngleVelocity = vSpeed;
+				ropeAngleVelocity = -hSpeed;
 			} else {
-				ropeAngleVelocity = -vSpeed;
+				ropeAngleVelocity = hSpeed;
 			}
 			
 			ropeAngle = point_direction(grappleX,grappleY,x,y); //angle of fire

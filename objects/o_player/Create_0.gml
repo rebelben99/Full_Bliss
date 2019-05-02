@@ -24,7 +24,7 @@ enum pState {
 }
 
 PColor = make_color_hsv(irandom_range(0,225),225,random_range(200,225));
-ribbonFallOff = 0.975; //the amount by which the next segment is smaller, 1 = no change, any less than .95 is not desirable.
+ribbonFallOff = 0.985; //the amount by which the next segment is smaller, 1 = no change, any less than .95 is not desirable.
 
 list = ds_list_create();
 
