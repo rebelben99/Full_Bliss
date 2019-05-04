@@ -199,3 +199,10 @@ if(place_meeting(x,y+vSpeed,o_wall) || place_meeting(x,y+vSpeed,o_border)) {
 	}
 }
 y += vSpeed
+
+
+//WRAP SCREEN
+if (x < -SprtSize/2){
+	x = room_width + (SprtSize/2);
+	
+}

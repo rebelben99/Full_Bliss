@@ -14,6 +14,7 @@ gravity_ = 0.1; //Standard Gravity
 rGravity = 0.1; //Rope Gravity (Acceleration Downwards when rope is active)
 hSpeedFraction = 0.0; //???
 vSpeedFraction = 0.0; //???
+SprtSize = max(sprite_width,sprite_height);
 
 
 state = pState.normal;
