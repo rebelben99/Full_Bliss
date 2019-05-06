@@ -183,12 +183,10 @@ if(place_meeting(x+hSpeed,y,o_wall) || place_meeting(x+hSpeed,y,o_border)) {
 		if(hit = 1) {
 			audio_play_sound(sound1, 10, false);
 		}
-		if(hit = 2) {
-			audio_play_sound(sound2, 10, false);
-		}
+		
 		hit_play = false;	
 		hit += 1;
-		if (hit >= 3) {
+		if (hit >= 2) {
 			hit = 0;
 		}
 	}
@@ -224,12 +222,10 @@ if(place_meeting(x,y+vSpeed,o_wall) || place_meeting(x,y+vSpeed,o_border)) {
 		if(hit = 1) {
 			audio_play_sound(sound1, 10, false);
 		}
-		if(hit = 2) {
-			audio_play_sound(sound2, 10, false);
-		}
+		
 		hit_play = false;	
 		hit += 1;
-		if (hit >= 3) {
+		if (hit >= 2) {
 			hit = 0;
 		}
 	}
