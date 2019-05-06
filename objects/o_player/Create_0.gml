@@ -16,6 +16,7 @@ hSpeedFraction = 0.0; //???
 vSpeedFraction = 0.0; //???
 hit_play = true;
 surface = -1;
+hit = 0;
 
 state = pState.normal;
 

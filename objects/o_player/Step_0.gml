@@ -177,8 +177,20 @@ vSpeed -= vSpeedFraction;
 //Collision w/ terrain
 if(place_meeting(x+hSpeed,y,o_wall) || place_meeting(x+hSpeed,y,o_border)) {
 	if(hit_play) { //audio
-	  audio_play_sound(sound1, 10, false);
-      hit_play = false;	
+		if(hit = 0) {
+			audio_play_sound(sound0, 10, false); 
+		}
+		if(hit = 1) {
+			audio_play_sound(sound1, 10, false);
+		}
+		if(hit = 2) {
+			audio_play_sound(sound2, 10, false);
+		}
+		hit_play = false;	
+		hit += 1;
+		if (hit >= 3) {
+			hit = 0;
+		}
 	}
 	
 	//collision logic
@@ -206,8 +218,20 @@ x += hSpeed
 
 if(place_meeting(x,y+vSpeed,o_wall) || place_meeting(x,y+vSpeed,o_border)) {
 	if(hit_play) { //audio
-	  audio_play_sound(sound1, 10, false);
-      hit_play = false;	
+		if(hit = 0) {
+			audio_play_sound(sound0, 10, false); 
+		}
+		if(hit = 1) {
+			audio_play_sound(sound1, 10, false);
+		}
+		if(hit = 2) {
+			audio_play_sound(sound2, 10, false);
+		}
+		hit_play = false;	
+		hit += 1;
+		if (hit >= 3) {
+			hit = 0;
+		}
 	}
 	
 	//collision logic
