@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "48da3377-1162-44bc-ac66-e73c904aeb9b",
+            "Value": {
+                "id": "596331ca-cc98-45b9-bc11-ad0e243a93a9",
+                "resourcePath": "sounds\\longPingCollide\\longPingCollide.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "49c8d5b3-9859-4a68-8afd-88b9d2ed4215",
             "Value": {
                 "id": "a34cb918-8ae1-4a91-8a18-e414f885d8f5",
@@ -196,6 +204,14 @@
                 "id": "85cca56b-4028-49c2-83a2-2b661e44e433",
                 "resourcePath": "rooms\\room6\\room6.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "4cbbbcbf-fd82-4853-809e-5b323fa0193d",
+            "Value": {
+                "id": "9b47ee75-b989-4f72-b9de-4f211ad42067",
+                "resourcePath": "sounds\\whoosh4\\whoosh4.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -415,6 +431,22 @@
             }
         },
         {
+            "Key": "8d24c8c8-56e0-467a-b7e6-323f5e60de01",
+            "Value": {
+                "id": "f48bccf1-7a4b-4c7c-9638-33f0c4cff005",
+                "resourcePath": "sounds\\whoosh2\\whoosh2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "914680fd-e6ba-4dcf-813b-f257c1062a7e",
+            "Value": {
+                "id": "3067ed3d-5afe-4635-87df-683152b9ea2d",
+                "resourcePath": "sounds\\collide\\collide.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "954e7ae9-c777-49a5-8b18-d293d12be057",
             "Value": {
                 "id": "a6069dcb-049b-485c-b3cf-6b9f33b6adbb",
@@ -436,6 +468,14 @@
                 "id": "06b6ea5b-461e-4087-901e-7b68c3faf766",
                 "resourcePath": "objects\\o_player\\o_player.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a0706f5d-af2c-4576-aa72-6bd377c41e9e",
+            "Value": {
+                "id": "775f8a62-8dd1-41ee-8947-9e6396d97b0d",
+                "resourcePath": "sounds\\pingCollide1\\pingCollide1.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -511,6 +551,14 @@
             }
         },
         {
+            "Key": "bf1fedf2-d214-4354-b02e-65b363202095",
+            "Value": {
+                "id": "da23a3f2-13d4-42d8-8adf-a939e034abe7",
+                "resourcePath": "sounds\\whoosh1\\whoosh1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "bfc4aba8-1512-4beb-8233-57c041b9c547",
             "Value": {
                 "id": "1cd04bde-1b3f-48e1-86b1-47655718f227",
@@ -548,6 +596,14 @@
                 "id": "827ccfd7-d107-447e-9820-64f08ffa13ad",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "d00834fd-b696-406b-8bd4-1ce2a699dfec",
+            "Value": {
+                "id": "371df617-b3a3-48de-a2dc-b85c51c172c8",
+                "resourcePath": "sounds\\pingCollide2\\pingCollide2.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -636,6 +692,14 @@
                 "id": "34c8bb8f-c6a3-44c4-aaa1-2af0d68540f6",
                 "resourcePath": "views\\f931b44c-ae3f-41f2-aaf7-9aa26ac34bd9.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f969183f-1cef-46c9-b8c1-9c9b3887a2b4",
+            "Value": {
+                "id": "0bfdd39a-808d-443d-bed5-fb430c61713e",
+                "resourcePath": "sounds\\whoosh3\\whoosh3.yy",
+                "resourceType": "GMSound"
             }
         }
     ],
