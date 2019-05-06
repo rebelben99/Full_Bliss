@@ -7,7 +7,8 @@ if(!surface_exists(surface)) {
 	surface = surface_create(room_width,room_height);
 }
 surface_set_target(surface);
-	draw_circle(x,y,4,false);
+	//draw_sprite_stretched_ext(watercolorstrip,image_index,x,y,sprite_width, sprite_height,c_white,1 );
+	draw_sprite(watercolortriangle,0,x,y)
 	draw_line_width(x,y,xprevious,yprevious,10);
 surface_reset_target();
 
