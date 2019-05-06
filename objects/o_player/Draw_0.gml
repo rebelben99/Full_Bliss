@@ -28,9 +28,9 @@ draw_set_color(PColor);
 		var y1 = gridP1[# 0, e_point.y];
 		var w1 = gridP1[# 0, e_point.width];
 		
-		var x2 = gridP1[# 0, e_point.x];
-		var y2 = gridP1[# 0, e_point.y];
-		var w2 = gridP1[# 0, e_point.width];
+		var x2 = gridP2[# 0, e_point.x];
+		var y2 = gridP2[# 0, e_point.y];
+		var w2 = gridP2[# 0, e_point.width];
 		
 		var dir = point_direction(x1,y1,x2,y2);
 		var otho_dir1 = dir + 90;
