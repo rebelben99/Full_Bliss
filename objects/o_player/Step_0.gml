@@ -80,16 +80,37 @@ switch (state) {
 			ropeX = x;
 			ropeY = y;
 			
-			
-			if(grappleY >= ropeY) { //if (vSpeed < hSpeed)
-				ropeAngleVelocity = -hSpeed;
+			if(grappleY >= ropeY) { 		//Rope Direction Fix 1
+					ropeAngleVelocity = -hSpeed;			
 			} else {
-				ropeAngleVelocity = hSpeed;
+					ropeAngleVelocity = hSpeed;
 			}
 			
 			ropeAngle = point_direction(grappleX,grappleY,x,y); //angle of fire
 			
 			ropeLength = point_distance(grappleX,grappleY,x,y); //rope length
+			
+			
+			//Rope Direction Fix 2
+			if(ropeAngle mod 360 > 315) { //lower right
+				if(sign(hSpeed) = 1 && sign(vSpeed) = 1)
+					ropeAngleVelocity *= -1;
+			}
+			if(ropeAngle mod 360 > 0 && ropeAngle mod 360 < 45) {  //upper right
+				if(sign(hSpeed) = 1 && sign(vSpeed) = -1)
+					ropeAngleVelocity *= -1;
+			}
+			
+			if(ropeAngle mod 360 > 135 && ropeAngle mod 360 < 180) { //upper left
+				if(sign(hSpeed) = -1 && sign(vSpeed) = -1)
+					ropeAngleVelocity *= -1;
+			}
+			if(ropeAngle mod 360 > 180 && ropeAngle mod 360 < 225) { //lower right
+				if(sign(hSpeed) = -1 && sign(vSpeed) = 1)
+					ropeAngleVelocity *= -1;
+			}
+			
+			
 			
 			state = pState.swing;			
 		}
@@ -98,7 +119,8 @@ switch (state) {
 	
 	case pState.swing: { 
 		var _ropeAngleAcceleration = -rGravity * dcos(ropeAngle); //rope acceleration downwards, must be multiplied by a negative number
-		_ropeAngleAcceleration += (_keyRight - _keyLeft)*0.08;
+		//_ropeAngleAcceleration += (_keyRight - _keyLeft)*0.08;
+		
 		ropeAngleVelocity += _ropeAngleAcceleration;
 		
 		if(ropeAngleVelocity > maxRopeSpeed) { ////////////////////Create Script using code to limit Value1 to a positive and negative Value2
@@ -109,7 +131,6 @@ switch (state) {
 		}
 		
 		var lengthFraction = 150;
-		//if()
 		
 		ropeAngle += ropeAngleVelocity/(ropeLength/lengthFraction);
 		
@@ -155,6 +176,12 @@ vSpeed -= vSpeedFraction;
 
 //Collision w/ terrain
 if(place_meeting(x+hSpeed,y,o_wall) || place_meeting(x+hSpeed,y,o_border)) {
+	if(hit_play) { //audio
+	  audio_play_sound(sound1, 10, false);
+      hit_play = false;	
+	}
+	
+	//collision logic
 	var _hStep = sign(hSpeed);	
 	
 	if (abs(hSpeed) > 1) {
@@ -164,8 +191,10 @@ if(place_meeting(x+hSpeed,y,o_wall) || place_meeting(x+hSpeed,y,o_border)) {
 	}
 	
 	hSpeedFraction = 0;
-	while(!place_meeting(x+_hStep,y,o_wall) || place_meeting(x+hSpeed,y,o_border)) 
+	while(!place_meeting(x+_hStep,y,o_wall) || place_meeting(x+hSpeed,y,o_border)) {
+		hit_play = true;
 		x += _hStep;
+	}
 	if (state == pState.swing) {
 		ropeAngle = point_direction(grappleX,grappleY,x,y);
 		ropeAngleVelocity *= -0.99;//bounce
@@ -176,6 +205,12 @@ x += hSpeed
 
 
 if(place_meeting(x,y+vSpeed,o_wall) || place_meeting(x,y+vSpeed,o_border)) {
+	if(hit_play) { //audio
+	  audio_play_sound(sound1, 10, false);
+      hit_play = false;	
+	}
+	
+	//collision logic
 	var _vStep = sign(vSpeed);	
 	
 	if(_keyJump) {	
@@ -191,8 +226,10 @@ if(place_meeting(x,y+vSpeed,o_wall) || place_meeting(x,y+vSpeed,o_border)) {
 	}
 	
 	vSpeedFraction = 0;
-	while(!place_meeting(x,y+_vStep,o_wall) || place_meeting(x,y+vSpeed,o_border)) 
-		y += _vStep;
+	while(!place_meeting(x,y+_vStep,o_wall) || place_meeting(x,y+vSpeed,o_border)) {
+		hit_play = true;
+		y += _vStep;	
+	}
 	if (state == pState.swing) {
 		ropeAngle = point_direction(grappleX,grappleY,x,y);
 		ropeAngleVelocity *= -0.99;//bounce

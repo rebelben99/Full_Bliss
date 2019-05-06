@@ -1,7 +1,7 @@
 window_set_cursor(cr_cross)
 
 // h = Horrisontal, v = Verticle
-maxRopeSpeed = 4; //Max speed when grappled
+maxRopeSpeed = 5; //Max speed when grappled
 hSpeed = 0; 
 vSpeed = 0;
 walkSpeed = 5; 
@@ -14,7 +14,7 @@ gravity_ = 0.1; //Standard Gravity
 rGravity = 0.1; //Rope Gravity (Acceleration Downwards when rope is active)
 hSpeedFraction = 0.0; //???
 vSpeedFraction = 0.0; //???
-
+hit_play = true;
 
 state = pState.normal;
 
@@ -23,7 +23,7 @@ enum pState {
 	swing
 }
 
-PColor = make_color_hsv(irandom_range(0,225),225,random_range(200,225));
+PColor = make_color_hsv(irandom_range(0,225),0,215);
 ribbonFallOff = 0.985; //the amount by which the next segment is smaller, 1 = no change, any less than .95 is not desirable.
 
 list = ds_list_create();

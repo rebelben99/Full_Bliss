@@ -1,3 +1,4 @@
+
 state = pState.normal;
 x = other.x;
 y = other.y;
