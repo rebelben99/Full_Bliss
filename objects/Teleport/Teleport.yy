@@ -2,7 +2,7 @@
     "id": "d3d54c5f-0284-4662-a687-6440958d991b",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "object12",
+    "name": "Teleport",
     "eventList": [
         
     ],

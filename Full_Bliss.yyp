@@ -626,7 +626,7 @@
             "Key": "d3d54c5f-0284-4662-a687-6440958d991b",
             "Value": {
                 "id": "78a51b99-e7ed-48d9-8e74-12bc8c23d41b",
-                "resourcePath": "objects\\object12\\object12.yy",
+                "resourcePath": "objects\\Teleport\\Teleport.yy",
                 "resourceType": "GMObject"
             }
         },
