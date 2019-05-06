@@ -15,6 +15,7 @@ rGravity = 0.1; //Rope Gravity (Acceleration Downwards when rope is active)
 hSpeedFraction = 0.0; //???
 vSpeedFraction = 0.0; //???
 hit_play = true;
+surface = -1;
 
 state = pState.normal;
 

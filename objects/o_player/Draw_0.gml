@@ -1,8 +1,21 @@
+draw_set_color(PColor);
 if (state == pState.swing) {
 	draw_line_width(grappleX,grappleY,ropeX,ropeY,2);
 }
 
+if(!surface_exists(surface)) {
+	surface = surface_create(room_width,room_height);
+}
+surface_set_target(surface);
+	draw_circle(x,y,4,false);
+	draw_line_width(x,y,xprevious,yprevious,10);
+surface_reset_target();
+
+draw_surface(surface,0,0);
+
+
 draw_set_color(PColor);
+
 
 draw_primitive_begin(pr_trianglestrip);
 	var size_list = ds_list_size(list);
@@ -33,3 +46,5 @@ draw_primitive_begin(pr_trianglestrip);
 draw_primitive_end();
 
 draw_self();
+
+

@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "4dec5e9a-7d22-4822-b221-cc41c238bc7c",
+            "Value": {
+                "id": "0a38d353-a39d-4ea9-8e91-6989e279dd3a",
+                "resourcePath": "objects\\Surface\\Surface.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4e63f0a5-b65c-4bb0-8bb1-f1caa86e8d09",
             "Value": {
                 "id": "2e9e9520-362a-47b5-bb68-2920ce3b9d11",
