@@ -8,7 +8,7 @@ if(!surface_exists(surface)) {
 }
 surface_set_target(surface);
 	//draw_sprite_stretched_ext(watercolorstrip,image_index,x,y,sprite_width, sprite_height,c_white,1 );
-	draw_sprite(watercolortriangle,0,x,y)
+	draw_sprite(watercolorstrip,0,x,y)
 	draw_line_width(x,y,xprevious,yprevious,10);
 surface_reset_target();
 
