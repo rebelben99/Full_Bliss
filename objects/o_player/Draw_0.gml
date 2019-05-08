@@ -18,7 +18,11 @@ draw_surface(surface,0,0);
 draw_set_color(PColor);
 
 
+<<<<<<< HEAD
 /*draw_primitive_begin(pr_trianglestrip);
+=======
+draw_primitive_begin(pr_trianglestrip);
+>>>>>>> parent of d9000f4... shrinkdown
 	var size_list = ds_list_size(list);
 	for (var i = 0; i < size_list-1; i++) {
 		var gridP1 = list[| i];
