@@ -30,12 +30,12 @@ grid[# 0, e_point.width] = width;
 ds_list_add(list, grid);
 
 //test for whether ribbon is constant width or pointed
-if(keyboard_check_pressed(vk_numpad1)) { //constant
+/*if(keyboard_check_pressed(vk_numpad1)) { //constant
 	ribbonFallOff = 1;
 }
 if(keyboard_check_pressed(vk_numpad2)) { //pointed
 	ribbonFallOff = 0.98;	
-}
+}*/
 
 
 
@@ -56,7 +56,7 @@ for (var i = 0; i < size_list; i++) {
 switch (state) {
 	case pState.normal: {
 		var dir = _keyRight - _keyLeft; // 1=right, 0=stand, -1=left
-		hSpeed += dir * walkAcceleration;
+		//hSpeed += dir * walkAcceleration;
 		
 		if (dir == 0) { //if standing still
 			var hFriction = hFrictionGround;
@@ -138,13 +138,14 @@ switch (state) {
 		ropeAngleVelocity *= rFriction; //air friction when swinging
 		
 		//Rope Length Controlls
-		if _keyDown && ropeLength >= 10 { //reel rope in ("s" and ?)
-			ropeLength -= 3.5;
-		}
-		if _keyUp && ropeLength <= 500 { //push rope out ("w" and ?)
-			ropeLength += 3.5;
-		}
 		
+			if (_keyDown && ropeLength >= 10) { //reel rope in ("s" and ?)
+				ropeLength -= 3.5;
+			}
+			if (_keyUp && ropeLength <= 500) { //push rope out ("w" and ?)
+				ropeLength += 3.5;
+			}
+			
 		ropeX = grappleX + lengthdir_x(ropeLength,ropeAngle);
 		ropeY = grappleY + lengthdir_y(ropeLength,ropeAngle)
 		
@@ -152,7 +153,7 @@ switch (state) {
 		vSpeed = ropeY - y;
 		hSpeed = ropeX - x;
 		
-		if(_keyJump) {	
+		if(_keyJump ) {	
 			state = pState.normal;
 			vSpeedFraction = 0;
 			vSpeed = -jumpSpeed + vSpeed;
