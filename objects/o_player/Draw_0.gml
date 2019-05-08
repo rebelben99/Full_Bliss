@@ -7,6 +7,7 @@ if(!surface_exists(surface)) {
 	surface = surface_create(room_width,room_height);
 }
 surface_set_target(surface);
+//NewPColor = PColor + make_color_hsv(298,0,215);
 	//draw_sprite_stretched_ext(watercolorstrip,watercolorstrip,x,y,sprite_width*2, sprite_height*2, PColor, 1 );
 	draw_sprite_ext(watercolorstrip,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
 	//draw_sprite(watercolorstrip,0,x,y)
