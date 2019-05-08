@@ -1,3 +1,4 @@
+image_blend = PColor;
 grounded = (place_meeting(x,y+1,o_wall));
 //Keybinds::
 var _keyLeft = keyboard_check(ord("A"));
