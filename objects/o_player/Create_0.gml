@@ -1,7 +1,7 @@
 window_set_cursor(cr_cross)
 
 // h = Horrisontal, v = Verticle
-maxRopeSpeed = 5; //Max speed when grappled
+maxRopeSpeed = 4; //Max speed when grappled
 hSpeed = 0; 
 vSpeed = 0;
 walkSpeed = 5; 

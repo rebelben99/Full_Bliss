@@ -367,14 +367,6 @@
             }
         },
         {
-            "Key": "7e3574c2-09a1-47c3-a436-a767243e5ded",
-            "Value": {
-                "id": "33474c09-8de8-4b8d-959a-37e9ab7cdf6e",
-                "resourcePath": "rooms\\room5\\room5.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "81ba723d-b0da-47fa-b274-3f08347b4677",
             "Value": {
                 "id": "fe0f5ebe-e824-42bf-8a22-4c580e4d120a",
@@ -388,14 +380,6 @@
                 "id": "21977d55-000a-4fd7-87c8-0b1f0f0c3efb",
                 "resourcePath": "objects\\platform1\\platform1.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "85e153a9-6eee-47d8-88b4-23291cf2d9fe",
-            "Value": {
-                "id": "e8a8f86a-f393-4375-96ec-5cee68bbecbe",
-                "resourcePath": "rooms\\room9\\room9.yy",
-                "resourceType": "GMRoom"
             }
         },
         {
@@ -548,14 +532,6 @@
                 "id": "da23a3f2-13d4-42d8-8adf-a939e034abe7",
                 "resourcePath": "sounds\\whoosh1\\whoosh1.yy",
                 "resourceType": "GMSound"
-            }
-        },
-        {
-            "Key": "bfc4aba8-1512-4beb-8233-57c041b9c547",
-            "Value": {
-                "id": "1cd04bde-1b3f-48e1-86b1-47655718f227",
-                "resourcePath": "rooms\\room8\\room8.yy",
-                "resourceType": "GMRoom"
             }
         },
         {
