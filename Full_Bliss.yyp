@@ -42,7 +42,7 @@
             "Key": "077f535a-540a-477b-bbe6-148e22453ab7",
             "Value": {
                 "id": "3636d711-cfd8-4c8e-8d45-ed925ea5c724",
-                "resourcePath": "rooms\\room1\\room1.yy",
+                "resourcePath": "rooms\\Flower\\Flower.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -146,7 +146,7 @@
             "Key": "4821b24e-0dcc-4c32-bf41-c220b8fe4cec",
             "Value": {
                 "id": "3a17bd30-1ba4-43ee-b550-aea0721c2bb7",
-                "resourcePath": "rooms\\room3\\room3.yy",
+                "resourcePath": "rooms\\ColorBook\\ColorBook.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -188,14 +188,6 @@
                 "id": "6f75f2bd-96c5-4f9a-84ef-9219995cd702",
                 "resourcePath": "views\\4b72c98f-2551-4b1b-8466-88d68cfb1d20.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "4c24f3a9-435e-450d-82d3-fa6f062ac73b",
-            "Value": {
-                "id": "85cca56b-4028-49c2-83a2-2b661e44e433",
-                "resourcePath": "rooms\\room2\\room2.yy",
-                "resourceType": "GMRoom"
             }
         },
         {
