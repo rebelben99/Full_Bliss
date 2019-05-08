@@ -11,7 +11,7 @@
     "bbox_right": 443,
     "bbox_top": 38,
     "bboxmode": 0,
-    "colkind": 1,
+    "colkind": 0,
     "coltolerance": 0,
     "edgeFiltering": false,
     "frames": [
@@ -66,5 +66,5 @@
     "type": 0,
     "width": 500,
     "xorig": 233,
-    "yorig": 243
+    "yorig": 244
 }

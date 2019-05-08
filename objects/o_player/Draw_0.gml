@@ -7,9 +7,9 @@ if(!surface_exists(surface)) {
 	surface = surface_create(room_width,room_height);
 }
 surface_set_target(surface);
-	//draw_sprite_stretched_ext(watercolorstrip,image_index,x,y,sprite_width, sprite_height,c_white,1 );
-	draw_sprite(watercolorstrip,0,x,y)
-	draw_line_width(x,y,xprevious,yprevious,10);
+	draw_sprite_stretched_ext(watercolorstrip,0,x,y,sprite_width*2, sprite_height*2, PColor, 1 );
+	//draw_sprite(watercolorstrip,0,x,y)
+	//draw_line_width(x,y,xprevious,yprevious,10);
 surface_reset_target();
 
 draw_surface(surface,0,0);
@@ -18,7 +18,7 @@ draw_surface(surface,0,0);
 draw_set_color(PColor);
 
 
-draw_primitive_begin(pr_trianglestrip);
+/*draw_primitive_begin(pr_trianglestrip);
 	var size_list = ds_list_size(list);
 	for (var i = 0; i < size_list-1; i++) {
 		var gridP1 = list[| i];
@@ -44,7 +44,7 @@ draw_primitive_begin(pr_trianglestrip);
 
 
 
-draw_primitive_end();
+draw_primitive_end();*/
 
 draw_self();
 
