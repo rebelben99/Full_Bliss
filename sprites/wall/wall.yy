@@ -6,33 +6,33 @@
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 31,
+    "bbox_bottom": 999,
     "bbox_left": 0,
-    "bbox_right": 31,
+    "bbox_right": 1499,
     "bbox_top": 0,
-    "bboxmode": 0,
-    "colkind": 1,
+    "bboxmode": 2,
+    "colkind": 0,
     "coltolerance": 0,
     "edgeFiltering": false,
     "frames": [
         {
-            "id": "f0a37808-40f0-48e8-a5f2-5ffa9c9e8988",
+            "id": "3b244d7e-2aa8-4ded-83d1-99d401c38761",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
             "SpriteId": "49c8d5b3-9859-4a68-8afd-88b9d2ed4215",
             "compositeImage": {
-                "id": "f1a650c5-bca7-4ffb-84a2-505d657ecddd",
+                "id": "04e277c6-fa68-4be8-a486-8a91aa5a0ac4",
                 "modelName": "GMSpriteImage",
                 "mvc": "1.0",
-                "FrameId": "f0a37808-40f0-48e8-a5f2-5ffa9c9e8988",
+                "FrameId": "3b244d7e-2aa8-4ded-83d1-99d401c38761",
                 "LayerId": "00000000-0000-0000-0000-000000000000"
             },
             "images": [
                 {
-                    "id": "b4daecda-3842-40aa-a7ec-6627cf9e78a5",
+                    "id": "c6b4a88f-30a2-4531-922f-d7a145a3adca",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "f0a37808-40f0-48e8-a5f2-5ffa9c9e8988",
+                    "FrameId": "3b244d7e-2aa8-4ded-83d1-99d401c38761",
                     "LayerId": "a622ebbe-d575-4be8-ac46-c2088e270c4f"
                 }
             ]
@@ -40,7 +40,7 @@
     ],
     "gridX": 0,
     "gridY": 0,
-    "height": 32,
+    "height": 1000,
     "layers": [
         {
             "id": "a622ebbe-d575-4be8-ac46-c2088e270c4f",
@@ -54,17 +54,17 @@
             "visible": true
         }
     ],
-    "origin": 9,
+    "origin": 4,
     "originLocked": false,
     "playbackSpeed": 15,
     "playbackSpeedType": 0,
     "premultiplyAlpha": false,
-    "sepmasks": false,
+    "sepmasks": true,
     "swatchColours": null,
     "swfPrecision": 2.525,
     "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "type": 0,
-    "width": 32,
-    "xorig": -10,
-    "yorig": 11
+    "width": 1500,
+    "xorig": 750,
+    "yorig": 500
 }
