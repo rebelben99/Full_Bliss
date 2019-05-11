@@ -9,7 +9,7 @@ if(!surface_exists(surface)) {
 surface_set_target(surface);
 //NewPColor = PColor + make_color_hsv(298,0,215);
 	//draw_sprite_stretched_ext(watercolorstrip,watercolorstrip,x,y,sprite_width*2, sprite_height*2, PColor, 1 );
-	draw_sprite_ext(watercolorstrip,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
+	draw_sprite_ext(sprite31,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
 	//draw_sprite(watercolorstrip,0,x,y)
 	//draw_line_width(x,y,xprevious,yprevious,10);
 surface_reset_target();
