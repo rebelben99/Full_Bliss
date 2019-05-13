@@ -5,8 +5,8 @@ var _keyLeft = keyboard_check(ord("A"));
 var _keyRight = keyboard_check(ord("D"));
 var _keyUp = keyboard_check(ord("W"));
 var _keyDown = keyboard_check(ord("S"));
-var _keyJump = keyboard_check_pressed(vk_space);
-var _keyDrop = keyboard_check_pressed(vk_control);
+var _keyJump = mouse_check_button_pressed(mb_right);
+var _keyDrop = mouse_check_button_released(mb_left);
 
 
 
@@ -73,7 +73,7 @@ switch (state) {
 			vSpeed += -jumpSpeed;
 		}
 		
-		if (keyboard_check_pressed(vk_lalt) || mouse_check_button_pressed(mb_left)) { //when mouse clicked or left alt pressed
+		if (mouse_check_button_pressed(mb_left)) { //when mouse clicked or left alt pressed
 			//hook Pos
 			grappleX = mouse_x; 
 			grappleY = mouse_y;
@@ -139,12 +139,12 @@ switch (state) {
 		
 		//Rope Length Controlls
 		
-			if (_keyDown && ropeLength >= 10) { //reel rope in ("s" and ?)
+			/*if (_keyDown && ropeLength >= 10) { //reel rope in ("s" and ?)
 				ropeLength -= 3.5;
 			}
 			if (_keyUp && ropeLength <= 500) { //push rope out ("w" and ?)
 				ropeLength += 3.5;
-			}
+			}*/
 			
 		ropeX = grappleX + lengthdir_x(ropeLength,ropeAngle);
 		ropeY = grappleY + lengthdir_y(ropeLength,ropeAngle)
