@@ -1,8 +1,5 @@
-if(room == Neon){
-	room_goto_previous();
-}
-if(room == room1){
-	room = room3;	
+if(room == room4){
+	room = room7;	
 } else { 
 	room_goto_previous();
 }
