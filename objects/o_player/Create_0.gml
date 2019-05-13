@@ -4,13 +4,13 @@ window_set_cursor(cr_cross)
 maxRopeSpeed = 4; //Max speed when grappled
 hSpeed = 0; 
 vSpeed = 0;
-walkSpeed = 5; 
+walkSpeed = 10; 
 walkAcceleration = 0.5;
 hFrictionGround = 0.5; //When Sliding Across Ground                               -might not need due to bounce?-
-hFrictionAir = 0.005; //When Floating in air and not grappled
+hFrictionAir = 0.01; //When Floating in air and not grappled
 rFriction = 0.99999; //Air Friction Applied while grappled
 jumpSpeed = 6;  //Jump Strength
-gravity_ = 0.1; //Standard Gravity
+gravity_ = 0.5; //Standard Gravity
 rGravity = 0.1; //Rope Gravity (Acceleration Downwards when rope is active)
 hSpeedFraction = 0.0; //???
 vSpeedFraction = 0.0; //???
