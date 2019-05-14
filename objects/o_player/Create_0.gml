@@ -7,12 +7,12 @@ vSpeed = 0;
 walkSpeed = 10; 
 walkAcceleration = 0.5;
 hFrictionGround = 0.1; //When Sliding Across Ground                               -might not need due to bounce?-
-hFrictionAir = 0.05; //When Floating in air and not grappled
+hFrictionAir = 0.08; //When Floating in air and not grappled
 rFriction = 0.99999; //Air Friction Applied while grappled
 
-jumpSpeed = 6;  //Jump Strength
-gravity_ = 0.18; //Standard Gravity
-rGravity = 0.1; //Rope Gravity (Acceleration Downwards when rope is active)
+jumpSpeed = 10;  //Jump Strength
+gravity_ = 0.3; //Standard Gravity
+rGravity = 0.01; //Rope Gravity (Acceleration Downwards when rope is active)
 
 jumpSpeed = 10;  //Jump Strength
 gravity_ = 0.6; //Standard Gravity
