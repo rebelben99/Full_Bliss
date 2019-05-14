@@ -6,7 +6,7 @@ var _keyRight = keyboard_check(ord("D"));
 var _keyUp = keyboard_check(ord("W"));
 var _keyDown = keyboard_check(ord("S"));
 var _keyJump = mouse_check_button_pressed(mb_right);
-var _keyDrop = mouse_check_button_released(mb_left);
+var _keyDrop = mouse_check_button_pressed(mb_left);
 
 
 
