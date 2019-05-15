@@ -11,7 +11,7 @@ hFrictionAir = 0.08; //When Floating in air and not grappled
 rFriction = 0.99999; //Air Friction Applied while grappled
 
 jumpSpeed = 10;  //Jump Strength
-gravity_ = 0.3; //Standard Gravity
+gravity_ = 0.25; //Standard Gravity
 rGravity = 0.01; //Rope Gravity (Acceleration Downwards when rope is active)
 
 jumpSpeed = 10;  //Jump Strength
