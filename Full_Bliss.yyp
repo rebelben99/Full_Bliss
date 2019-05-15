@@ -471,14 +471,6 @@
             }
         },
         {
-            "Key": "8e4767aa-5781-4209-9209-299baba4c449",
-            "Value": {
-                "id": "dd9eb014-500f-4975-8ff1-802edc9a6741",
-                "resourcePath": "sprites\\spr_Empty\\spr_Empty.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "90497588-3950-45f5-8f9e-e305056fd75c",
             "Value": {
                 "id": "55af3dae-d505-4bf4-8b9b-a75ce41b223a",
