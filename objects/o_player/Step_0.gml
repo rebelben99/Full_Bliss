@@ -119,7 +119,10 @@ switch (state) {
 			
 			if(ropeLength <= maxRopeLength) {
 				state = pState.swing;	
-			}
+			} /*else {
+				ropeLength = maxRopeLength;
+				state = pState.swing;
+			}*/
 		}
 		
 	}break;
