@@ -1,6 +1,8 @@
 window_set_cursor(cr_none);
 cursor_sprite = Neutral;
 
+
+
 // h = Horrisontal, v = Verticle
 maxRopeLength = 400;
 maxRopeSpeed = 5; //Max speed when grappled
