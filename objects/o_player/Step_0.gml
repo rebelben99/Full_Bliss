@@ -8,12 +8,18 @@ var _keyDown = keyboard_check(ord("S"));
 var _keyJump = mouse_check_button_pressed(mb_right);
 var _keyDrop = mouse_check_button_pressed(mb_left);
 
+//Length Check
+grappleDistance = point_distance(mouse_x,mouse_y,x,y); //distance from crosshair to player
+
+if(grappleDistance <= maxRopeLength) {
+	cursor_sprite = cursor_True;
+} else {
+	cursor_sprite = cursor_False;
+}
 
 
 
-
-
-var size_list = ds_list_size(list);
+/*var size_list = ds_list_size(list);
 if (size_list >= length){
 	var grid = list[| 0];
 	if ds_exists(grid,ds_type_grid) {
@@ -30,12 +36,12 @@ grid[# 0, e_point.width] = width;
 ds_list_add(list, grid);
 
 //test for whether ribbon is constant width or pointed
-/*if(keyboard_check_pressed(vk_numpad1)) { //constant
+if(keyboard_check_pressed(vk_numpad1)) { //constant
 	ribbonFallOff = 1;
 }
 if(keyboard_check_pressed(vk_numpad2)) { //pointed
 	ribbonFallOff = 0.98;	
-}*/
+}
 
 
 
@@ -43,7 +49,7 @@ if(keyboard_check_pressed(vk_numpad2)) { //pointed
 for (var i = 0; i < size_list; i++) {
 	var gridP1 = list[| i];
 	gridP1[# 0, e_point.width] *= ribbonFallOff;
-}
+}*/
 
 
 
@@ -91,7 +97,6 @@ switch (state) {
 			
 			ropeLength = point_distance(grappleX,grappleY,x,y); //rope length
 			
-			
 			//Rope Direction Fix 2
 			if(ropeAngle mod 360 > 315) { //lower right
 				if(sign(hSpeed) = 1 && sign(vSpeed) = 1)
@@ -112,8 +117,9 @@ switch (state) {
 			}
 			
 			
-			
-			state = pState.swing;			
+			if(ropeLength <= maxRopeLength) {
+				state = pState.swing;	
+			}
 		}
 		
 	}break;

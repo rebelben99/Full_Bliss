@@ -1,6 +1,8 @@
-window_set_cursor(cr_cross)
+window_set_cursor(cr_none);
+cursor_sprite = Neutral;
 
 // h = Horrisontal, v = Verticle
+maxRopeLength = 400;
 maxRopeSpeed = 5; //Max speed when grappled
 hSpeed = 0; 
 vSpeed = 0;
@@ -24,6 +26,9 @@ hit_play = true;
 surface = -1;
 hit = 0;
 
+//debug
+ropeLengthDebug = true;
+
 state = pState.normal;
 
 enum pState {
@@ -45,6 +50,7 @@ enum e_point {
 
 length = 60*2;
 width = 10;
+
 
 
 
