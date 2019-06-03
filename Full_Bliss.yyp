@@ -807,6 +807,14 @@
             }
         },
         {
+            "Key": "c1ba6614-4bb7-449b-9d65-7ba9161b971c",
+            "Value": {
+                "id": "a562465d-544a-4f78-95e3-555df923d1fa",
+                "resourcePath": "rooms\\Debug\\Debug.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "c37b53da-c7bd-414b-8bb4-c64d6d210538",
             "Value": {
                 "id": "97fcf796-f263-4919-931e-c9f31bb874fe",

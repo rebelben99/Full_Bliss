@@ -205,7 +205,7 @@ vSpeed -= vSpeedFraction;
 if(place_meeting(x+hSpeed,y,o_wall) || place_meeting(x+hSpeed,y,o_border)) {
 	if(hit_play) { //audio
 		if(hit = 0) {
-			audio_play_sound(collide, 10, false); 
+			audio_play_sound(CollectOrCollide, 10, false); 
 		}
 		/*if(hit = 1) {
 			audio_play_sound(sound1, 10, false);
@@ -244,7 +244,7 @@ x += hSpeed
 if(place_meeting(x,y+vSpeed,o_wall) || place_meeting(x,y+vSpeed,o_border)) {
 	if(hit_play) { //audio
 		if(hit = 0) {
-			audio_play_sound(collide, 10, false); 
+			audio_play_sound(CollectOrCollide, 10, false); 
 		}
 		/*if(hit = 1) {
 			audio_play_sound(sound1, 10, false);
