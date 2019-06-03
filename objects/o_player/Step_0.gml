@@ -17,20 +17,22 @@ if(grappleDistance <= maxRopeLength) {
 	cursor_sprite = cursor_False;
 }//*/
 
-if(colour_get_hue(PColor) <= 80 && colour_get_hue(PColor) >= 330) {
+show_debug_message(colour_get_hue(PColor))
+
+if(colour_get_hue(PColor) <= 56 || colour_get_hue(PColor) >= 212) {
 	maxRopeSpeed = 15;
 	jumpSpeed = 15;
-	gravity_ = 0.6; //Standard Gravity
-	rGravity = 0.2;
+	gravity_ = 1; //Standard Gravity
+	rGravity = 0.5;
 }
-if(colour_get_hue(PColor) > 80 && colour_get_hue(PColor) < 150) {
-	gravity_ = 0.6; //Standard Gravity
+if(colour_get_hue(PColor) > 56 && colour_get_hue(PColor) < 106) {
+	gravity_ = 0.6; 
 	rGravity = 0.09;
 	jumpSpeed = 10;
 	maxRopeSpeed = 5;
 }
-if(colour_get_hue(PColor) >= 150 && colour_get_hue(PColor) < 330) {
-	gravity_ = 0.1; //Standard Gravity
+if(colour_get_hue(PColor) >= 106 && colour_get_hue(PColor) < 212) {
+	gravity_ = 0.1; 
 	hFrictionAir = 0.01;
 	maxRopeSpeed = 5;
 	jumpSpeed = 10;
