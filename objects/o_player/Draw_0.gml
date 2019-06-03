@@ -1,15 +1,15 @@
 draw_set_color(PColor);
 if (state == pState.swing) {
-	//draw_line_width(grappleX,grappleY,ropeX,ropeY,2);
+	draw_line_width(grappleX,grappleY,ropeX,ropeY,2);
 	
-chainWidth = sprite_get_width(s_wall); //Your chain sprite here
+/*chainWidth = sprite_get_width(s_wall); //Your chain sprite here
 chainLength = ropeLength; //Get the length of the entire chain.
 chainAngle = degtorad(ropeAngle); //get the angle of the chain and convert it from degrees to radians
 
 for(var i = 0; i < ropeLength; i += chainWidth) //Run a loop so we draw every chain-segment
 {
      draw_sprite_ext(s_wall,0,(grappleX  + ( cos(chainAngle) * i ) + ( cos(chainAngle) * (chainWidth/2) ) ),(grappleY - ( sin( chainAngle ) * i )) + (sin( chainAngle ) * (chainWidth/2)) ,1,1,ropeAngle,PColor,1);
-}
+}*/
 
 }
 

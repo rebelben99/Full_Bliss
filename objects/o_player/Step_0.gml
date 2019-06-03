@@ -15,19 +15,21 @@ if(grappleDistance <= maxRopeLength) {
 	cursor_sprite = cursor_True;
 } else {
 	cursor_sprite = cursor_False;
-}
+}//*/
 
-if(colour_get_hue(PColor) <= 65 && colour_get_hue(PColor) >= 330) {
+if(colour_get_hue(PColor) <= 80 && colour_get_hue(PColor) >= 330) {
 	maxRopeSpeed = 15;
 	jumpSpeed = 15;
 	gravity_ = 0.6; //Standard Gravity
-	rGravity = 0.15;
-} else if(colour_get_hue(PColor) > 65 && colour_get_hue(PColor) < 150) {
+	rGravity = 0.2;
+}
+if(colour_get_hue(PColor) > 80 && colour_get_hue(PColor) < 150) {
 	gravity_ = 0.6; //Standard Gravity
 	rGravity = 0.09;
 	jumpSpeed = 10;
 	maxRopeSpeed = 5;
-} else if(colour_get_hue(PColor) >= 150 && colour_get_hue(PColor) < 330) {
+}
+if(colour_get_hue(PColor) >= 150 && colour_get_hue(PColor) < 330) {
 	gravity_ = 0.1; //Standard Gravity
 	hFrictionAir = 0.01;
 	maxRopeSpeed = 5;
@@ -96,8 +98,13 @@ switch (state) {
 		
 		if (mouse_check_button_pressed(mb_left)) { //when mouse clicked or left alt pressed
 			//hook Pos
-			grappleX = mouse_x; 
-			grappleY = mouse_y;
+			if(grappleDistance <= maxRopeLength) {
+				grappleX = mouse_x; 
+				grappleY = mouse_y;
+			} else {
+				grappleX = x + maxRopeLength/grappleDistance*(mouse_x-x)
+				grappleY = y + maxRopeLength/grappleDistance*(mouse_y-y)
+			}
 			//player Pos
 			ropeX = x;
 			ropeY = y;
@@ -132,14 +139,8 @@ switch (state) {
 			}
 			
 			
-			if(ropeLength <= maxRopeLength) {
 				state = pState.swing;	
-			} /*else {
-				ropeLength = maxRopeLength;
-				state = pState.swing;
-			}*/
 		}
-		
 	}break;
 	
 	case pState.swing: { 
@@ -154,8 +155,6 @@ switch (state) {
 		if(ropeAngleVelocity < -maxRopeSpeed) {
 			ropeAngleVelocity = -maxRopeSpeed;
 		}
-		
-		var lengthFraction = 150;
 		
 		ropeAngle += ropeAngleVelocity/(ropeLength/lengthFraction);
 		

@@ -28,6 +28,8 @@ hit_play = true;
 surface = -1;
 hit = 0;
 
+lengthFraction = 150;
+
 //debug
 ropeLengthDebug = true;
 
