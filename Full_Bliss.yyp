@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "210f0791-ce7f-4ba2-9d73-dc361bd7c9bb",
+            "Value": {
+                "id": "bf528cef-592c-4170-9e43-7bf51246ddff",
+                "resourcePath": "sprites\\ropesprite\\ropesprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2329ba88-e55c-428b-8a56-850ad09124d9",
             "Value": {
                 "id": "cab7c405-dc07-4d00-a2b8-195442a0b62b",
