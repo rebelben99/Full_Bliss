@@ -20,9 +20,41 @@ if(!surface_exists(surface)) {
 surface_set_target(surface);
 //NewPColor = PColor + make_color_hsv(298,0,215);
 	//draw_sprite_stretched_ext(watercolorstrip,watercolorstrip,x,y,sprite_width*2, sprite_height*2, PColor, 1 );
-	draw_sprite_ext(sprite31,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
 	//draw_sprite(watercolorstrip,0,x,y)
 	//draw_line_width(x,y,xprevious,yprevious,10);
+	if(room == Room2){ draw_sprite_ext(
+		
+		sprite31 //change THIS to be the chalk sprite
+		
+		,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
+	} else if(room == Room3){ draw_sprite_ext(
+		
+		sprite31 //change THIS to be the marker sprite
+		
+		,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
+	} else if(room == Room4){ draw_sprite_ext(
+		
+		sprite31 //change THIS to be the airbrush sprite
+		
+		,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
+	} else if(room == Room5){ draw_sprite_ext(
+		
+		sprite31 //change THIS to be the frescobrush sprite
+		
+		,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
+	} else if(room == Room6){ draw_sprite_ext(
+		
+		sprite31 //change THIS to be the oilpaint sprite
+		
+		,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
+	} else if(room == Room7){ draw_sprite_ext(
+		
+		sprite31 //change THIS to be the shale sprite
+		
+		,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
+	} else {
+		draw_sprite_ext(sprite31,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
+	}
 surface_reset_target();
 
 draw_surface(surface,0,0);

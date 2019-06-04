@@ -1,5 +1,5 @@
-if(room == room3){
-	room = room7;	
+if(room == Tutorial){
+	room = Debug;	
 } else { 
 	room_goto_previous();
 }
