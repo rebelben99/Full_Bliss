@@ -11,7 +11,7 @@ var _keyDrop = mouse_check_button_pressed(mb_left);
 //Length Check
 grappleDistance = point_distance(mouse_x,mouse_y,x,y); //distance from crosshair to player
 
-if(grappleDistance <= maxRopeLength) {
+/*if(grappleDistance <= maxRopeLength) {
 	cursor_sprite = cursor_True;
 } else {
 	cursor_sprite = cursor_False;

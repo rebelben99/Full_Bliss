@@ -1,6 +1,5 @@
 window_set_cursor(cr_none);
-cursor_sprite = Neutral;
-
+cursor_sprite = sprite41;
 
 
 // h = Horrisontal, v = Verticle
