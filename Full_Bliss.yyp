@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "2d3ada10-f115-4c3a-a0c0-a22316e77745",
+            "Value": {
+                "id": "cd41a357-8433-4793-b888-c59bcd449452",
+                "resourcePath": "sprites\\sprite45\\sprite45.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2de4cd32-e440-4245-bd67-df387cd1d59b",
             "Value": {
                 "id": "b22c6274-2fc1-4ffa-9c65-f2c0c4f6d06e",
@@ -199,10 +207,18 @@
             }
         },
         {
+            "Key": "3efb8543-e471-4151-b8af-1153cef3321e",
+            "Value": {
+                "id": "99f756bb-816f-4b21-a650-20bc226d07a5",
+                "resourcePath": "objects\\object34\\object34.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "40594a1f-185d-4f79-a174-f22fefb618f3",
             "Value": {
                 "id": "a58c7cc6-66a1-4310-b687-a6839b8763ba",
-                "resourcePath": "rooms\\room4\\room4.yy",
+                "resourcePath": "rooms\\room9\\room9.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -548,6 +564,14 @@
                 "id": "f48bccf1-7a4b-4c7c-9638-33f0c4cff005",
                 "resourcePath": "sounds\\whoosh2\\whoosh2.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "8e34064a-508b-4452-bb1e-b663f9d6f15d",
+            "Value": {
+                "id": "0bcd165c-b0c6-45f9-8198-02540afe391c",
+                "resourcePath": "rooms\\room4\\room4.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
