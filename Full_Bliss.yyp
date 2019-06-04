@@ -535,6 +535,14 @@
             }
         },
         {
+            "Key": "81c30ab6-792c-41b6-a685-b03625c24b86",
+            "Value": {
+                "id": "d9b87c90-8143-4489-89fd-bbd51c2460d4",
+                "resourcePath": "sprites\\sprite46\\sprite46.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8274f722-6e17-49c4-ab7f-4eee128ce107",
             "Value": {
                 "id": "21977d55-000a-4fd7-87c8-0b1f0f0c3efb",
@@ -996,6 +1004,14 @@
                 "id": "2d9c3ebb-5b19-46f2-a01f-7f75e173a44c",
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f642fb02-7ac4-4007-8d34-a7c3847d457b",
+            "Value": {
+                "id": "85162308-52e7-43ba-bd00-3f45dfb47222",
+                "resourcePath": "objects\\chalkbrush\\chalkbrush.yy",
+                "resourceType": "GMObject"
             }
         },
         {
