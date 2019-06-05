@@ -19,23 +19,24 @@ grappleDistance = point_distance(mouse_x,mouse_y,x,y); //distance from crosshair
 
 show_debug_message(colour_get_hue(PColor))
 
-if(colour_get_hue(PColor) <= 56 || colour_get_hue(PColor) >= 212) {
+if(colour_get_hue(PColor) <= 56 || colour_get_hue(PColor) >= 212) { //red
 	maxRopeSpeed = 15;
 	jumpSpeed = 15;
 	gravity_ = 1; //Standard Gravity
 	rGravity = 0.5;
 }
-if(colour_get_hue(PColor) > 56 && colour_get_hue(PColor) < 106) {
+if(colour_get_hue(PColor) > 56 && colour_get_hue(PColor) < 106) { //green
 	gravity_ = 0.6; 
-	rGravity = 0.09;
+	rGravity = 0.25;
 	jumpSpeed = 10;
-	maxRopeSpeed = 5;
+	maxRopeSpeed = 10;
 }
-if(colour_get_hue(PColor) >= 106 && colour_get_hue(PColor) < 212) {
+if(colour_get_hue(PColor) >= 106 && colour_get_hue(PColor) < 212) { //blue
 	gravity_ = 0.1; 
 	hFrictionAir = 0.01;
 	maxRopeSpeed = 5;
 	jumpSpeed = 10;
+	rGravity = 0.1;
 }
 
 /*var size_list = ds_list_size(list);
