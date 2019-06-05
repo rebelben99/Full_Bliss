@@ -29,27 +29,27 @@ surface_set_target(surface);
 		,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
 	} else if(room == Room3){ draw_sprite_ext(
 		
-		sprite31 //change THIS to be the marker sprite
+		sprite46 //change THIS to be the marker sprite
 		
 		,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
 	} else if(room == Room4){ draw_sprite_ext(
 		
-		sprite31 //change THIS to be the airbrush sprite
+		sprite53 //change THIS to be the airbrush sprite
 		
 		,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
 	} else if(room == Room5){ draw_sprite_ext(
 		
-		sprite31 //change THIS to be the frescobrush sprite
+		sprite54 //change THIS to be the frescobrush sprite
 		
 		,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
 	} else if(room == Room6){ draw_sprite_ext(
 		
-		sprite31 //change THIS to be the oilpaint sprite
+		sprite55 //change THIS to be the oilpaint sprite
 		
 		,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
 	} else if(room == Room7){ draw_sprite_ext(
 		
-		sprite31 //change THIS to be the shale sprite
+		sprite53 //change THIS to be the shale sprite
 		
 		,image_index,x,y,0.8, 0.8, 0, PColor, 1 );
 	} else {
