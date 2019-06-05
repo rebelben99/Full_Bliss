@@ -1,5 +1,5 @@
-if(room == Debug){
-	room = Tutorial;	
+if(room == Endscreen){
+	room = Startscreen;	
 } else { 
 	room_goto_next();
 }
