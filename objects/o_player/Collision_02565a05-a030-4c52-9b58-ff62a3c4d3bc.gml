@@ -2,8 +2,8 @@ if(Teleport.visible == true){
 	with(other){
 		instance_destroy();	
 	}
-	if(room == room7){
-		room = room4;	
+	if(room == Endscreen){
+		room = Startscreen;	
 	} else { 
 		room_goto_next();
 	}
